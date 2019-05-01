@@ -9,5 +9,5 @@ Sample for verifying whether the installation of librealsense2 was successful (o
 - install according to https://github.com/IntelRealSense/librealsense/blob/development/doc/installation.md
 - Ubuntu 14/16/18 with LTS kernel 
 - some aspects may or may not work, however building the library does via cmake and make
-- the firmware is already installed on the camera device (UR Inventory-Nr. 000419)
+- the firmware is already installed on the camera device (UR Inventory-Nr. 000419) (https://www.intel.com/content/dam/support/us/en/documents/emerging-technologies/intel-realsense-technology/Linux-RealSense-D400-DFU-Guide.pdf)
 - use sample project to test whether your installation of the realsense2 lib was successful 

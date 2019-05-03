@@ -5,11 +5,10 @@
 
 #include <opencv2/opencv.hpp>
 
-#define WIDTH_RGB 640
-#define HEIGHT_RGB 480
-#define WIDTH_DEPTH 640
-#define HEIGHT_DEPTH 480
-
+# define WIDTH_RGB 1920
+# define HEIGHT_RGB 1080
+# define WIDTH_DEPTH 640
+# define HEIGHT_DEPTH 480
 
 /*
  * READ FIRST!
@@ -75,7 +74,13 @@ int main(int argc, char * argv[]) try
     rs2::colorizer color_map;
     rs2::pipeline pipe;
 
-    pipe.start();
+    rs2::config cfg;
+
+
+    cfg.enable_stream(RS2_STREAM_COLOR, WIDTH_RGB, HEIGHT_RGB, RS2_FORMAT_RGB8, 30);
+    cfg.enable_stream(RS2_STREAM_DEPTH, RS2_FORMAT_Z16, 30);
+
+    pipe.start(cfg);
 
     while(true)
     {
